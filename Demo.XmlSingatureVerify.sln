@@ -1,0 +1,41 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.32901.82
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Demo.XmlSignatureVerify.Lib", "Demo.XmlSignatureVerify.Lib\Demo.XmlSignatureVerify.Lib.csproj", "{0BB5144B-12B5-4B98-A1CC-2AC7FD1E5387}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Files", "Files", "{68D31DDD-3095-4247-BA65-D7D33BDC3F10}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Certificates", "Certificates", "{FA9A7C84-3CB0-45BE-9A23-2E834E341FBB}"
+	ProjectSection(SolutionItems) = preProject
+		Files\Certificates\readme_certificate_generation.txt = Files\Certificates\readme_certificate_generation.txt
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Demo.XmlSignatureVerify.Tests", "Demo.XmlSignatureVerify.Tests\Demo.XmlSignatureVerify.Tests.csproj", "{2422C91E-DCD6-4FC6-A13F-4C2C521C22F9}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{0BB5144B-12B5-4B98-A1CC-2AC7FD1E5387}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0BB5144B-12B5-4B98-A1CC-2AC7FD1E5387}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0BB5144B-12B5-4B98-A1CC-2AC7FD1E5387}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0BB5144B-12B5-4B98-A1CC-2AC7FD1E5387}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2422C91E-DCD6-4FC6-A13F-4C2C521C22F9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2422C91E-DCD6-4FC6-A13F-4C2C521C22F9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2422C91E-DCD6-4FC6-A13F-4C2C521C22F9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2422C91E-DCD6-4FC6-A13F-4C2C521C22F9}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{FA9A7C84-3CB0-45BE-9A23-2E834E341FBB} = {68D31DDD-3095-4247-BA65-D7D33BDC3F10}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {8EBD8A12-516B-4410-936A-37EED36B973F}
+	EndGlobalSection
+EndGlobal
