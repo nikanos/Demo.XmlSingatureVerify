@@ -9,10 +9,16 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Files", "Files", "{68D31DDD
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Certificates", "Certificates", "{FA9A7C84-3CB0-45BE-9A23-2E834E341FBB}"
 	ProjectSection(SolutionItems) = preProject
-		Files\Certificates\readme_certificate_generation.txt = Files\Certificates\readme_certificate_generation.txt
+		Files\Certificates\DEMO_XML_SIGN.pfx = Files\Certificates\DEMO_XML_SIGN.pfx
+		Files\Certificates\readme.txt = Files\Certificates\readme.txt
 	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Demo.XmlSignatureVerify.Tests", "Demo.XmlSignatureVerify.Tests\Demo.XmlSignatureVerify.Tests.csproj", "{2422C91E-DCD6-4FC6-A13F-4C2C521C22F9}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Input", "Input", "{CD2B0327-412B-472D-9792-FF9E19306FB2}"
+	ProjectSection(SolutionItems) = preProject
+		Files\Input\customers_signed.xml = Files\Input\customers_signed.xml
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -34,6 +40,7 @@ Global
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{FA9A7C84-3CB0-45BE-9A23-2E834E341FBB} = {68D31DDD-3095-4247-BA65-D7D33BDC3F10}
+		{CD2B0327-412B-472D-9792-FF9E19306FB2} = {68D31DDD-3095-4247-BA65-D7D33BDC3F10}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {8EBD8A12-516B-4410-936A-37EED36B973F}
