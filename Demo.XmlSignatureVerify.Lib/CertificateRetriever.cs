@@ -4,7 +4,7 @@ using System.Security.Cryptography.X509Certificates;
 
 namespace Demo.XmlSignatureVerify.Lib
 {
-    public class CertificateRequester : ICertificateRequester
+    public class CertificateRetriever : ICertificateRetriever
     {
         public X509Certificate2 GetCertificateFromTrustedStore(string thumbprint)
         {

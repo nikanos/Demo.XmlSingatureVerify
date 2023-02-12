@@ -8,26 +8,26 @@ namespace Demo.XmlSignatureVerify.Lib
 {
     public class XmlSignatureVerifier
     {
-        private readonly ICertificateRequester _certificateRequester;
+        private readonly ICertificateRetriever _certificateRetriever;
         private readonly ISignedXmlFactory _signedXmlFactory;
 
-        public XmlSignatureVerifier(ICertificateRequester certificateRequester, ISignedXmlFactory signedXmlFactory)
+        public XmlSignatureVerifier(ICertificateRetriever certificateRetriever, ISignedXmlFactory signedXmlFactory)
         {
-            _certificateRequester = certificateRequester ?? throw new ArgumentNullException(nameof(certificateRequester));
+            _certificateRetriever = certificateRetriever ?? throw new ArgumentNullException(nameof(certificateRetriever));
             _signedXmlFactory = signedXmlFactory ?? throw new ArgumentNullException(nameof(_signedXmlFactory));
         }
 
         public bool VerifyXMLSignature(XmlDocument xmlDocument, string referenceIdAttributeName)
         {
             X509Certificate2 signingCertificate = ExtractCertificate(xmlDocument);
-            if (!_certificateRequester.IsCertificateInTrustedStore(signingCertificate.Thumbprint))
+            if (!_certificateRetriever.IsCertificateInTrustedStore(signingCertificate.Thumbprint))
                 throw new SigningCertificateNotTrustedException($"Certificate with thumbprint {signingCertificate.Thumbprint} was not found in trusted store");
 
             XmlNodeList nodeList = xmlDocument.GetElementsByTagName("Signature", Constants.XMLNS_XMLDSIG);
             SignedXml signedXml = _signedXmlFactory.CreateSignedXml(xmlDocument, referenceIdAttributeName);
             signedXml.LoadXml((XmlElement)nodeList[0]);
 
-            X509Certificate2 trustedCertificate = _certificateRequester.GetCertificateFromTrustedStore(signingCertificate.Thumbprint);
+            X509Certificate2 trustedCertificate = _certificateRetriever.GetCertificateFromTrustedStore(signingCertificate.Thumbprint);
             return signedXml.CheckSignature(trustedCertificate, verifySignatureOnly: true);
         }
 

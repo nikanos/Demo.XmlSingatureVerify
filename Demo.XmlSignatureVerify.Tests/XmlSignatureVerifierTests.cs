@@ -7,14 +7,26 @@ namespace Demo.XmlSignatureVerify.Tests
     public class XmlSignatureVerifierTests
     {
         [TestMethod]
-        public void TestMethodCustomers()
+        public void XmlSignatureVerifier_VerifyXMLSignature_WithSignedCustomersXml_Succeeds()
         {
             string xml = Resources.customers_signed;
             Assert.IsNotNull(xml);
 
-            var verifier = new XmlSignatureVerifier(new CertificateRequester(), new SignedXmlFactory());
+            var verifier = CreateXmlSignatureVerifierHelper();
             var result = verifier.VerifyXMLSignature(xml);
             Assert.IsTrue(result);
+        }
+
+        private XmlSignatureVerifier CreateXmlSignatureVerifierHelper(ICertificateRetriever certificateRetriever = null,
+                                                                      ISignedXmlFactory signedXmlFactory = null)
+        {
+            if (certificateRetriever == null)
+                certificateRetriever = new CertificateRetriever();
+            if (signedXmlFactory == null)
+                signedXmlFactory = new SignedXmlFactory();
+
+            return new XmlSignatureVerifier(certificateRetriever: certificateRetriever,
+                                            signedXmlFactory: signedXmlFactory);
         }
     }
 }

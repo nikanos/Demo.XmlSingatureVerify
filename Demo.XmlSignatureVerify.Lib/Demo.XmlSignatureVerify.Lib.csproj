@@ -42,10 +42,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="CertificateRequester.cs" />
+    <Compile Include="CertificateRetriever.cs" />
     <Compile Include="Constants.cs" />
     <Compile Include="Exceptions\SigningCertificateNotTrustedException.cs" />
-    <Compile Include="Interfaces\ICertificateRequester.cs" />
+    <Compile Include="Interfaces\ICertificateRetriever.cs" />
     <Compile Include="Interfaces\ISignedXmlFactory.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="XmlSignatureVerifier.cs" />
