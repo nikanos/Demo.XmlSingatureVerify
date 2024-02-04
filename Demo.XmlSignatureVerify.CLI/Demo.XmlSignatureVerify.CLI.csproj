@@ -54,5 +54,21 @@
     <None Include="App.config" />
     <None Include="packages.config" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Demo.XmlSignatureVerify.Lib\Demo.XmlSignatureVerify.Lib.csproj">
+      <Project>{0bb5144b-12b5-4b98-a1cc-2ac7fd1e5387}</Project>
+      <Name>Demo.XmlSignatureVerify.Lib</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="..\Files\Input\customers_signed.xml">
+      <Link>Input\customers_signed.xml</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Files\Input\customers_signed_tampered.xml">
+      <Link>Input\customers_signed_tampered.xml</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

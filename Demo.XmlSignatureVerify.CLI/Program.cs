@@ -1,9 +1,8 @@
 ﻿using CommandLine;
+using Demo.XmlSignatureVerify.Lib;
 using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System.Xml;
 
 namespace Demo.XmlSignatureVerify.CLI
 {
@@ -20,7 +19,23 @@ namespace Demo.XmlSignatureVerify.CLI
         {
             try
             {
-                //TODO. Implement CLI
+                XmlDocument xmlDoc = new XmlDocument();
+                xmlDoc.Load(opts.InputFile);
+
+                var signedXmlFactory = new SignedXmlFactory();
+                var certificateRetriever = new CertificateRetriever();
+
+                var verifier = new XmlSignatureVerifier(certificateRetriever: certificateRetriever, signedXmlFactory: signedXmlFactory);
+                bool result;
+                if (string.IsNullOrEmpty(opts.ReferenceIdAttributeName))
+                    result = verifier.VerifyXMLSignature(xmlDoc);
+                else
+                    result = verifier.VerifyXMLSignature(xmlDoc, opts.ReferenceIdAttributeName);
+
+                if (result)
+                    Console.WriteLine("XML Signature verification success");
+                else
+                    Console.WriteLine("XML Signature verification failure");
             }
             catch (Exception e)
             {

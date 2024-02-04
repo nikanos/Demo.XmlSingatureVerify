@@ -1,0 +1,27 @@
+<root>
+  <Customers id="CustomersList">
+    <Customer>
+      <Name>tampered</Name>
+    </Customer>
+    <Signature xmlns="http://www.w3.org/2000/09/xmldsig#">
+      <SignedInfo>
+        <CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" />
+        <SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha256" />
+        <Reference URI="#CustomersList">
+          <Transforms>
+            <Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature" />
+            <Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" />
+          </Transforms>
+          <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256" />
+          <DigestValue>px+d5sIA5RfCDV3Htom3K+fgvVn0jOdXN7jH6VJ9w5w=</DigestValue>
+        </Reference>
+      </SignedInfo>
+      <SignatureValue>bP8n2QzHk6RbuT5FLn9JlEO+IhRXo0AaK21o7nqZohNBVHjNSijjZvK9hOINg1iq0qwqQWJIUQaypeS6tLapfwpXHc/+ef1bSMIB1PcYCjIgzinCH3Yattgqp1vjTJMmDwwsHwTMdPkXgFsQ/bFrAqmSTjJDmib0iu6q89woYpoa7ayRphsH+oE7GtdC8bKqYFfJn3Xzt1CevRX1WZBDcFGobUviC13ud1LYI6Hl4NytuXLClyfi8Mz4fVxAtL73UPGauGldkXBGpVWoCjPrVKVJpA8sU0oJJvUgIgSlNdCOR6jLo8Hxgk1p/WSIEKd6ZKiGjmtrml4/6xdT2+hyyg==</SignatureValue>
+      <KeyInfo>
+        <X509Data>
+          <X509Certificate>MIIDCjCCAfKgAwIBAgIQZshIpsai9bdK7m/pHOtOHzANBgkqhkiG9w0BAQUFADAYMRYwFAYDVQQDDA1ERU1PX1hNTF9TSUdOMB4XDTIyMTAxMDE5NTgxOVoXDTMyMTAxMDIwMDgxOVowGDEWMBQGA1UEAwwNREVNT19YTUxfU0lHTjCCASIwDQYJKoZIhvcNAQEBBQADggEPADCCAQoCggEBALe6aD43ABKFkIMj7IdhuCLI2q18Fz9kYundKn3YqioaMxS7sTLI/d6PlObFwkGUYJbpA1HdkWI4lttRzlb78F88DInOr1cnsSeBpENN1UDvvRsHyms+l28RZFRz7D0XmRUOlJOpgFyaKuaXHBiXtQ5sEG5ub+HHPz+X0eZONndNVRpGZPfcTo/KJfc4Hh3nBWIn/4kzPEatorca45JMZuoFX+CtY3tcPpJjoNHb34TFPqDtcHDAzFp154+WpICq/nh7jNJTNuYIkjvhvxsdgh28NHbCKoBt2E32xuAGbaU9mGe44o5jirwCRIOpn0EMXUxyPuuVYMJxHDK3TEZKA8UCAwEAAaNQME4wDgYDVR0PAQH/BAQDAgWgMB0GA1UdJQQWMBQGCCsGAQUFBwMCBggrBgEFBQcDATAdBgNVHQ4EFgQUUpc3Je9dXkf9Do8c4shbdwf9n2cwDQYJKoZIhvcNAQEFBQADggEBAFm/dbGGkeTSg7zWbIy+fJfU2Jl94YULjbnwusA1yXdByTJplDwFkBXgvs/Y4yn31DieQ2C5w7arRnUzVDjqossOCNzZ6NPSz0xoZZ/h0UvvWup+Gny8sNvSfmbDNCLgey+PcvmN0Y4Husbf2sxeFeRPY9n1rywEKDRmJY0IVn2jRPM/QPhXc5zXjTHIRaSheeEIa6WI/EatPyQjz5XIwOcOhCPuT/M7GmmHeb+bwkqKgBQScGD9ViI+azpFVad63IUm1ihVyS7tACPA/pbG0tyVJCY6XK8pLIJRjd8PjT6/70ipb/tLC+mTOB58gxv4w+TNrA8Ea7wpDevCxELuok4=</X509Certificate>
+        </X509Data>
+      </KeyInfo>
+    </Signature>
+  </Customers>
+</root>

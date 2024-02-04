@@ -18,6 +18,7 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Input", "Input", "{CD2B0327-412B-472D-9792-FF9E19306FB2}"
 	ProjectSection(SolutionItems) = preProject
 		Files\Input\customers_signed.xml = Files\Input\customers_signed.xml
+		Files\Input\customers_signed_tampered.xml = Files\Input\customers_signed_tampered.xml
 	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Demo.XmlSignatureVerify.CLI", "Demo.XmlSignatureVerify.CLI\Demo.XmlSignatureVerify.CLI.csproj", "{D626911D-C197-49E8-B36D-EA7A9F68C7C7}"
